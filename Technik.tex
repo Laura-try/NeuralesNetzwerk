@@ -1,0 +1,28 @@
+\section{Verwendete Technik und Programmiersprachen} \label{Kapitel: Technik}
+Die verwendeten Programmiersprachen und technischen Hilfsmittel werden in diesem Kapitel kurz vorgestellt.
+\subsection{Python}
+Python ist eine der meist benutzten universellen höheren Programmiersprachen.  Zentrales Ziel bei der Entwicklung der Sprache ist die Förderung eines gut lesbaren, knappen Programmierstils. So wird beispielsweise der Code nicht durch geschweifte Klammern (wie in fast allen C-basierenden Sprachen), sondern durch zwingende Einrückungen strukturiert.  Zudem ist die gesamte Syntax reduziert und auf Übersichtlichkeit optimiert \cite{Steyer_2018}.\\
+Python gehört zu den meist gebrauchten Programmiersprachen für Maschinelles Lernen \cite{url:ML_PL-20210901}.  Deswegen gibt es viele Bibliotheken,  die bei der Datenanalyse,  dem Aufbau der Neuronalen Netzwerke und dem Ausführen der Netzwerke helfen. Es ist nicht mehr nötig, einzelne Methoden zum Beispiel für Verlustfunktionen zu programmieren.  Diese sind in den Bibliotheken schon enthalten und ausgiebig getestet.\\
+Die benutzten Bibliotheken für Maschinelles Lernen werden einmal kurz vorgestellt.  Außerdem wurden noch numpy, benutzt, welches eine der fundamentalen Bibliotheken für wissenschaftliches Arbeiten in Python ist. \cite{url:numpy-20210907} Mit numpy werden zum Beispiel die Matrizen der Eingabedaten erstellt.
+\subsubsection{Scikit-Learn}
+Scikit-Learn ist eine Open-Source-Bibliothek,  die sowohl Überwachtes als auch Unüberwachtes Lernen unterstützt.  Sie bietet mehrere Methoden für die Datenvorbereitung,  Modellselektion und Evaluation \cite{url:scikit-learn-20210907}.
+In der Arbeit wird Scikit-Learn sowohl zur Datenvorbereitung benutzt als auch   zur Unterteilung der Daten in die Trainings-, Test- und Validierungssets.  Außerdem wird ein kleines konventionelles Maschinelles Lernmodell damit erstellt und evaluiert.
+\subsubsection{Keras \& TensorFlow} 
+\label{Keras}
+Für die Neuronalen Netzwerke wurde Keras und TensorFlow benutzt.  Keras ist  die Schnittstelle für TensorFlow.  So ist es einfach und übersichtlich,  Neuronale Netzwerke aufzubauen und zu evaluieren.  Dieses geschieht z.B. dadurch, das Keras Bausteine für die  Modellbildung  zu Verfügung stellt und so das komplexe Thema gut verpackt.  Aus diesem Grund ist es für den Anwender deutlich leichter Modelle auf zu bauen,  außerdem werden viele Einstellung erstmal automatisch getroffen. TensorFlow stellt die Modelle für die Neuronalen Netzwerke zu Verfügung.
+\subsubsection{lvreader} 
+ \label{lvreader}
+lvreader ist eine kostenfreie Bibliothek von LaVision,  die den Zugriff auf DaVis-Daten für Python verfügbar zu machen.  Die Schnittstelle kann das DaVis-spezifische Datenformat für Bilder und Vektorfelder lesen und auch wieder zurückschreiben. \cite{url:lvreader-20210901}\\
+Mit ihr wurden die aufgenommenen Daten in ein numpy-file umgewandelt,  um sie in Python weiter verarbeiten zu können.
+\subsection{DaVis} 
+\label{DaVis}
+DaVis ist eine Komplettsoftwarelösung für intelligente Imaging Anwendungen  und wurde von der Firma LaVision entwickelt. \cite{url:DaVis-20210901}.\\
+Die Software wurde in dieser Arbeit genutzt,  um die Aufnahmen der digitalen Anzeige zu machen.
+\subsection{Google Colab}
+'Colab ist ein Produkt von Google Research.  Mit Colab kann jeder Nutzer beliebigen Python-Code in einem Browser schreiben und ausführen.  Colab eignet sich besonders für Maschinelles Lernen,  Datenanalyse und den Bildungsbereich.  Etwas technischer ausgedrückt, ist Colab ein gehosteter Jupyter-Notebookdienst,  der keine Einrichtung erfordert und kostenlosen Zugriff auf Rechenressourcen einschließlich GPUs bietet.'\cite{url:Colab-20210901}\\
+Kurz gesagt lässt man mit colab seinen Programm auf einen von Google gestellten Server laufen. Diese Maschinen sind extra für Maschinelles Lernen ausgelegt und haben viele benötigte Python-Bibliotheken (z.B. TensorFlow) vorinstalliert.  Es gibt jedem die Möglichkeit sein Modell zu trainieren ohne selbst einen leistungsstarken PC zu haben. \\
+Colab wurde benutzt um das Maschinelle Lernen auszuführen.  Die Daten wurden dazu in die Google Cloud hochgeladen.  Danach konnte das Juypter-Notebook benutzt werden, um das Programm für das Maschinelle Lernen zu schreiben.\\
+Juypter-Notebook ist ein webbasiertes Notizbuch,  in dem sowohl Programm als auch Textabschnitte geschrieben und verarbeiten werden können.
+Die kostenlose Version von Colab kann zwölf Stunden benutzt werden,  bevor man sich erneut einloggen muss.
+\subsection{C++}
+C++ ist eine weitverbreitet objektorientierte Programmiersprache.  'Sie ermöglicht sowohl die effiziente und maschinennahe Programmierung als auch eine Programmierung auf hohem Abstraktionsniveau.  Der Standard definiert auch eine Standardbibliothek, zu der verschiedene Implementierungen existieren. '\cite{url:wiki-20210901} In der Firma LaVision wird die eigene Software DaVis in C++ entwickelt.

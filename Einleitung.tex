@@ -1,0 +1,27 @@
+\section{Einleitung}
+In der sich immer schneller verändernden Welt von Software und Hardware ist Qualitätssicherung eine große Aufgabe.  Die Zyklen zwischen Updates und neuen Treibern werden stetig kleiner und die eingebauten Features immer komplexer. Das macht eine Qualitätssicherung unabdingbar,  aber auch extrem aufwendig. Das Automatisieren dieser Aufgabe ist ein großes Bestreben in der Industrie. \\
+So werden Zeit und Ressourcen gespart, zusätzlich sind Maschinen meistens gründlicher in der Ausführung von wiederholenden Tätigkeiten.  Das automatische Testen kann nach den Arbeitszeiten passieren und so nochmals Zeit sparen.\\
+Die Software, welche die Automatisierung übernimmt, beruht in jüngster Zeit immer mehr auf Maschinellem Lernen.  Dieses bietet sich gerade an, wenn es schon große Datenmengen gibt. \\
+In dieser Arbeit soll die Nützlichkeit und Umsetzbarkeit des Maschinellen Lernens an einem Teil eines schon vorhandenen Teststandes geprüft werden.  In dem davor bearbeiteten Praxisprojekt wurde die automatische Erkennung des Teststandes mit konventionellen Programmiermethoden durchgeführt.\\
+Es handelt sich um den Highspeed-Kamera-Teststand der Firma LaVision GmbH.  LaVision GmbH aus Göttingen (gegründet 1989) vertreibt Hard- und Software im Bereich der optischen Messtechnik für industrielle und wissenschaftliche Anwendungen. \cite{lavision.de} Zu der Hardware gehören unter anderem Kameras (High- und Lowspeed), Laser und PCs. DaVis, die von LaVision entwickelte Software, ist eine Komplettlösung für intelligente Imaging-Applikationen,  steuert die Hardware an,  macht die Aufnahmen,  die Bildverarbeitung und Bildauswertung . DaVis wird in C++ implementiert.  Bei optischen Messungen werden viele Geräte mit einer extrem genauen zeitlichen Steuerung benutzt,  dafür verwendet LaVision eine eigene Hardware Programmed Timing Unit (PTU).  Diese steuert den richtigen zeitlichen Ablauf der Aufnahmen indem das Auslösesignal (Trigger) mit der Aufnahmesoftware (DaVis) synchronisiert wird.
+\subsection{Gegenstand und Ziel}
+Der Highspeed-Kamera-Teststand ist zur Qualitätssicherung von neuen Kameras aber auch der internen Software gebaut worden.   Die Teststand-Hardware besteht aus einer digitalen Uhr,  welche aus zwei Reihen mit jeweils vier Sieben-Segment-Anzeigen besteht, und zwei Programmed Timing Units,  wobei eine die Uhr ansteuert und die andere den gesamten Ablauf der Aufnahme steuert. \cite{Becker2021}\\
+In dem Praxisprojekt zur dieser Arbeit wurde eine automatische Erkennung der Sieben-Segment-Anzeige programmiert. Hierzu wurden die einzelnen Segmente angesteuert und die Position und die Helligkeitswerte abgespeichert. Dann wurde bei einer Aufnahme verglichen, ob an der Position der Segmente die Helligkeitswerte erreicht wurden. Aus den erkannten Segmenten wird dann die Zahl erschlossen.\\
+In dieser Arbeit soll nun eine Sieben-Segment-Anzeige mit Maschinellem Lernen erkannt werden. Es soll sowohl das Ergebnis als auch der Aufwand verglichen werden. Hierzu ist zu sagen, dass die Software DaVis der Firma LaVision bisher keine Möglichkeit für Maschinelles Lernen bietet.  Aber es gibt sowohl schon eine Python-Bibliothek, um mit Daten aus der Software umzugehen, als auch ist DaVis darauf ausgelegt, viele Aufnahmen zu nehmen und damit weiter zu arbeiten.
+
+\subsection{Aufbau der Arbeit}
+Zum Beginn der Arbeit wurde sich als erstes in Materie und mathematische Grundlagen des Maschinellen Lernens eingearbeitet. Die Erkenntnisse werden in Kapitel 2 Grundlagen vorgestellt. \\
+Bei dem weiterem Verlauf wurde sich an den allgemeinen Ablauf von Maschinellen Lernen-Projekten gehalten\cite{Geron2019}: \\
+\begin{itemize} \label{Auflistung Projekt Ablauf}
+\item Problemidentifizierung
+\item Datenbeschaffung
+\item Datenanalyse und Visualisieren der Daten
+\item Datenvorbereitung 
+\item Modellwahl
+\item Evaluation und Verbesserung des Modelles
+\item Ergebnis diskutieren
+\end{itemize} 
+Es wurde die Entscheidung getroffen, nur mit einer Ziffer ein Maschinelles-Lernen-Modell zu implementieren. Der Highspeed-Kamera-Teststand besteht eigentlich aus acht Ziffern in zwei Reihen mit vier Ziffern unterteilt.  Der Grund für diese Entscheidung war,  dass die Zeit für Datenaufnahmen nicht gereicht hätte.  Außerdem ist auch die Frage wie sinnvoll es ist, mit allen Ziffern ein Modell auszustellen oder statt dieses Modells andere Methoden zu verwenden.  Dieses wird kurz in dem Kapitel Ausblick besprochen.\\
+In dem Kapitel 3 werden überblicksartig die verwendete Technik und die Programmiersprachen vorgestellt. In der Arbeit wurde vor allem Python benutzt.  Da aber in der Firma LaVision C++  die Hauptprogrammiersprache ist,  wird in Kapitel 6 auf die Möglichkeiten von Maschinellen Lernen in dieser Sprache eingegangen.\\
+In dem Kapitel 4 und 5 wird der größte Teil des Maschinellen Lernen-Projekts umgesetzt.  In Kapitel 4 wird sich mit den Daten auseinander gesetzt.  Im Kapitel 5 werden dann unterschiedliche Modelle aufgebaut und verbessert.
+Zum Schluss gibt es im Kapitel 7 eine Diskussion über die Ergebnisse des Maschinellen Lernens und einen Vergleich zu der konventionell programmierten Methode.

@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Bold;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).\
+Model: "sequential_4"\
+_________________________________________________________________\
+Layer (type)                 Output Shape              Param #   \
+=================================================================\
+dense_10 (Dense)             (None, 2000)              18594000  \
+_________________________________________________________________\
+dense_11 (Dense)             (None, 10)                20010     \
+_________________________________________________________________\
+dense_12 (Dense)             (None, 10)                110       \
+=================================================================\
+Total params: 18,614,120\
+Trainable params: 18,614,120\
+Non-trainable params: 0\
+_________________________________________________________________\
+Model Summery:  None\
+Model Layers:  [<keras.layers.core.Dense object at 0x7f71dfaac890>, <keras.layers.core.Dense object at 0x7f71dfabfd10>, <keras.layers.core.Dense object at 0x7f71da08e710>]\
+Weights:  [[-0.05402945  0.02666393  0.03575402 ... -0.01076687 -0.03171771\
+   0.01568338]\
+ [-0.04082549 -0.04596715  0.02915037 ...  0.03006711  0.05036164\
+  -0.01686359]\
+ [-0.04246961  0.00555269 -0.00216669 ... -0.05460266  0.04471444\
+   0.03528047]\
+ ...\
+ [-0.01974996  0.01915599  0.02379609 ... -0.01349719 -0.00179296\
+   0.02782574]\
+ [ 0.05054376  0.04795165 -0.02364035 ... -0.04922044  0.01782107\
+   0.01346298]\
+ [-0.01308216 -0.0261884  -0.0179237  ... -0.00761562 -0.05349903\
+   0.00278512]]\
+Biases Shape:  (10,)\
+Epoch 1/10\
+2335/2335 [==============================] - 159s 68ms/step - loss: 1.7855 - accuracy: 0.4354 - val_loss: 1.5864 - val_accuracy: 0.4973\
+Epoch 2/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.4548 - accuracy: 0.5291 - val_loss: 1.3515 - val_accuracy: 0.5464\
+Epoch 3/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.3149 - accuracy: 0.5537 - val_loss: 1.2130 - val_accuracy: 0.5636\
+Epoch 4/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.3111 - accuracy: 0.5565 - val_loss: 1.8468 - val_accuracy: 0.4861\
+Epoch 5/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.2780 - accuracy: 0.5695 - val_loss: 1.2566 - val_accuracy: 0.5677\
+Epoch 6/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.1629 - accuracy: 0.5916 - val_loss: 1.1087 - val_accuracy: 0.6073\
+Epoch 7/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.1583 - accuracy: 0.5879 - val_loss: 1.0912 - val_accuracy: 0.6208\
+Epoch 8/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.1558 - accuracy: 0.5863 - val_loss: 1.0664 - val_accuracy: 0.6154\
+Epoch 9/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.1184 - accuracy: 0.5951 - val_loss: 1.5447 - val_accuracy: 0.5438\
+Epoch 10/10\
+2335/2335 [==============================] - 158s 68ms/step - loss: 1.1096 - accuracy: 0.5961 - val_loss: 1.1181 - val_accuracy: 0.5877\
+fit history:  <keras.callbacks.History object at 0x7f71dfa816d0>\
+88/88 [==============================] - 3s 30ms/step - loss: 1.1033 - accuracy: 0.5924\
+---------------------------------------------------------------------------\
+ValueError                                Traceback (most recent call last)\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://localhost:8080/#"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 <ipython-input-6-88b53fdb8152>}} in <module>()\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2      86
+\f0\b0  \
+
+\f1\b      87
+\f0\b0  #Test image\
+---> 88 pre321 = model_seq.__call__(x[321])\
+
+\f1\b      89
+\f0\b0  pre321_max = np.argmax(pre321, axis = 1)\
+
+\f1\b      90
+\f0\b0  print('Image as Test. Label: \{\} Prediction \{\}'.format(Y[321], pre321_max))\
+\
+\pard\pardeftab720\sa120\partightenfactor0
+
+\f2 \cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 1 frames\
+\pard\pardeftab720\sa120\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://localhost:8080/#"}}{\fldrslt 
+\f0 \cf3 \ul \ulc3 \strokec3 /usr/local/lib/python3.7/dist-packages/keras/engine/input_spec.py}}
+\f0  in assert_input_compatibility(input_spec, inputs, layer_name)\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2     232
+\f0\b0                           ', found ndim=' + str(ndim) +\
+
+\f1\b     233
+\f0\b0                           '. Full shape received: ' +\
+--> 234                          str(tuple(shape)))\
+
+\f1\b     235
+\f0\b0      # Check dtype.\
+
+\f1\b     236
+\f0\b0      if spec.dtype is not None:\
+\
+ValueError: Input 0 of layer sequential_4 is incompatible with the layer: : expected min_ndim=2, found ndim=1. Full shape received: (9296,)\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+{{\NeXTGraphic unknown.png \width9660 \height6140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+}

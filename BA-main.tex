@@ -1,0 +1,77 @@
+%BPA Latex
+\input{preample.tex}
+\begin{document}
+	\selectlanguage{ngerman}													
+	\ohead{\pagemark}
+	\ihead{\sectionmark}
+	\cfoot{}
+	\pagestyle{scrheadings}
+	\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\input{Deckblatt}
+
+      
+
+\clearpage
+\includepdf{Selbst}
+
+
+
+\pagenumbering{arabic}    
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Inhaltsverzeichnis}
+\tableofcontents
+
+\setcounter{table}{0}		
+\clearpage
+\input{Einleitung}
+
+\clearpage
+\input{Grundlage}
+
+\clearpage
+\input{Technik}
+
+\clearpage
+\input{Daten}
+
+\clearpage
+\input{Modell}
+
+
+\clearpage
+\input{Diskussion}
+
+\clearpage
+\input{Ausblick}
+
+\clearpage
+\input{Zusammenfassung}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Danksagung}
+
+\sectionmark{Danksagung}
+
+Ich würde gerne meinem Betreuer Jens Gutzeit von der Firma LaVision danken.  Herr Gutzeit hatte immer Zeit und Geduld, mir bei meinen Fragen zu helfen.\\
+Außerdem möchte ich noch mich noch bei mehreren Mitarbeitern von LaVision bedanken: bei Daniel Büchner für die Umprogrammierung der Anzeige, bei Dominik Schulz für die Änderung der Platine der Anzeige und bei Joachim Wolf für die Einführung in den Kamerateststand und die Erklärung aus Sicht eines Anwenders. \\
+Des weiteren möchte ich mich noch bei Herrn Grothausmann für die Hilfe, einen Blick von außerhalb der Firma LaVision  und die Grundidee für die Arbeit ein Maschinelles Lernen Projekt zu machen bedanken.
+Zusätzlich danke ich noch Mario Hesse für die Vorlage des \LaTeX -Dokumentes.\\
+Außerdem möchte ich mich noch bei Kirsten Tuschling für das Korrektur lesen bedanken.\\
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\sectionmark{Literaturverzeichnis}
+\renewcommand{\refname}{Literaturverzeichnis}		
+\printbibliography						% Literaturverzeichnis statt Literatur als Überschrift verwenden	  %
+	
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\sectionmark{Abbildungsverzeichnis}
+\renewcommand{\refname}{Abbildungsverzeichnis}		
+\listoffigures
+
+\end{document}

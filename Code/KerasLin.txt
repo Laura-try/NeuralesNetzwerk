@@ -1,0 +1,124 @@
+
+
+Mounted at /content/drive
+All Data shape:  (59761, 9297)
+Label shape:  (59761,)
+Image data shape:  (59761, 9296)
+(37350, 9296)
+(19609, 9296)
+[[20 20 19 ... 20 20 20]
+ [20 21 21 ... 20 20 20]
+ [19 19 19 ... 19 20 19]
+ ...
+ [20 20 20 ... 20 20 19]
+ [19 19 19 ... 20 20 19]
+ [21 19 20 ... 21 20 20]]
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 9296)              0         
+_________________________________________________________________
+dense (Dense)                (None, 1200)              11156400  
+_________________________________________________________________
+dense_1 (Dense)              (None, 400)               480400    
+_________________________________________________________________
+dense_2 (Dense)              (None, 100)               40100     
+_________________________________________________________________
+dense_3 (Dense)              (None, 10)                1010      
+=================================================================
+Total params: 11,677,910
+Trainable params: 11,677,910
+Non-trainable params: 0
+_________________________________________________________________
+Model Summery:  None
+Model Layers:  [<keras.layers.core.Flatten object at 0x7fe8968cecd0>, <keras.layers.core.Dense object at 0x7fe891eff690>, <keras.layers.core.Dense object at 0x7fe891ec5b10>, <keras.layers.core.Dense object at 0x7fe891dd32d0>, <keras.layers.core.Dense object at 0x7fe891eff7d0>]
+Weights:  [[-0.02149885  0.00743801  0.00291413 ... -0.00649986 -0.00429362
+  -0.00873773]
+ [-0.00784379  0.00842593 -0.01773647 ...  0.02389868  0.01597058
+   0.010638  ]
+ [ 0.01526698 -0.02063812  0.00548217 ...  0.01152925  0.0005266
+   0.0086552 ]
+ ...
+ [-0.0140702   0.01280229 -0.0237951  ...  0.01127469 -0.01575347
+   0.00457034]
+ [-0.00938748  0.01253735 -0.00900716 ... -0.02123229 -0.00232754
+  -0.00670745]
+ [-0.02240555 -0.01134219  0.00050433 ...  0.01440464  0.00781064
+  -0.00191531]]
+Biases Shape:  (1200,)
+Epoch 1/10
+2335/2335 [==============================] - 178s 76ms/step - loss: 90.4468 - accuracy: 0.7851 - val_loss: 61.1551 - val_accuracy: 0.8188
+Epoch 2/10
+2335/2335 [==============================] - 177s 76ms/step - loss: 36.4336 - accuracy: 0.8947 - val_loss: 36.4689 - val_accuracy: 0.8466
+Epoch 3/10
+2335/2335 [==============================] - 178s 76ms/step - loss: 29.9607 - accuracy: 0.9255 - val_loss: 27.6999 - val_accuracy: 0.8892
+Epoch 4/10
+2335/2335 [==============================] - 180s 77ms/step - loss: 19.1283 - accuracy: 0.9551 - val_loss: 34.8059 - val_accuracy: 0.8788
+Epoch 5/10
+2335/2335 [==============================] - 183s 78ms/step - loss: 16.0998 - accuracy: 0.9616 - val_loss: 4.9703 - val_accuracy: 0.9592
+Epoch 6/10
+2335/2335 [==============================] - 184s 79ms/step - loss: 18.3940 - accuracy: 0.9646 - val_loss: 1.6696 - val_accuracy: 0.9737
+Epoch 7/10
+2335/2335 [==============================] - 184s 79ms/step - loss: 8.7185 - accuracy: 0.9772 - val_loss: 1.0595 - val_accuracy: 0.9940
+Epoch 8/10
+2335/2335 [==============================] - 184s 79ms/step - loss: 8.0581 - accuracy: 0.9816 - val_loss: 0.0205 - val_accuracy: 0.9995
+Epoch 9/10
+2335/2335 [==============================] - 183s 78ms/step - loss: 8.4116 - accuracy: 0.9831 - val_loss: 1.1067 - val_accuracy: 0.9965
+Epoch 10/10
+2335/2335 [==============================] - 184s 79ms/step - loss: 9.1324 - accuracy: 0.9843 - val_loss: 3.7162 - val_accuracy: 0.9722
+fit history:  <keras.callbacks.History object at 0x7fe891d75310>
+88/88 [==============================] - 2s 27ms/step - loss: 4.1259 - accuracy: 0.9707
+WARNING:tensorflow:Model was constructed with shape (None, 9296) for input KerasTensor(type_spec=TensorSpec(shape=(None, 9296), dtype=tf.float32, name='flatten_input'), name='flatten_input', description="created by layer 'flatten_input'"), but it was called on an input with incompatible shape (None, 1).
+
+---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+<ipython-input-1-69c39706fc7d> in <module>()
+     79 
+     80 #Test image
+---> 81 pre321 = model_seq.predict(x[321])
+     82 pre321_max = np.argmax(pre321, axis = 1)
+     83 print('Image as Test. Label: {}'.format(Y[321] ))
+
+9 frames
+
+/usr/local/lib/python3.7/dist-packages/tensorflow/python/framework/func_graph.py in wrapper(*args, **kwargs)
+    992           except Exception as e:  # pylint:disable=broad-except
+    993             if hasattr(e, "ag_error_metadata"):
+--> 994               raise e.ag_error_metadata.to_exception(e)
+    995             else:
+    996               raise
+
+ValueError: in user code:
+
+    /usr/local/lib/python3.7/dist-packages/keras/engine/training.py:1586 predict_function  *
+        return step_function(self, iterator)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/training.py:1576 step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    /usr/local/lib/python3.7/dist-packages/tensorflow/python/distribute/distribute_lib.py:1286 run
+        return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+    /usr/local/lib/python3.7/dist-packages/tensorflow/python/distribute/distribute_lib.py:2849 call_for_each_replica
+        return self._call_for_each_replica(fn, args, kwargs)
+    /usr/local/lib/python3.7/dist-packages/tensorflow/python/distribute/distribute_lib.py:3632 _call_for_each_replica
+        return fn(*args, **kwargs)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/training.py:1569 run_step  **
+        outputs = model.predict_step(data)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/training.py:1537 predict_step
+        return self(x, training=False)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/base_layer.py:1037 __call__
+        outputs = call_fn(inputs, *args, **kwargs)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/sequential.py:369 call
+        return super(Sequential, self).call(inputs, training=training, mask=mask)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/functional.py:415 call
+        inputs, training=training, mask=mask)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/functional.py:550 _run_internal_graph
+        outputs = node.layer(*args, **kwargs)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/base_layer.py:1020 __call__
+        input_spec.assert_input_compatibility(self.input_spec, inputs, self.name)
+    /usr/local/lib/python3.7/dist-packages/keras/engine/input_spec.py:254 assert_input_compatibility
+        ' but received input with shape ' + display_shape(x.shape))
+
+    ValueError: Input 0 of layer dense is incompatible with the layer: expected axis -1 of input shape to have value 9296 but received input with shape (None, 1)
+

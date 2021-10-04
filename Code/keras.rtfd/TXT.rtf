@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fmodern\fcharset0 Courier-Bold;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c93333;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).\
+All Data shape:  (59761, 9297)\
+Label shape:  (59761,)\
+Image data shape:  (59761, 9296)\
+(38844, 9296)\
+(18825, 9296)\
+Model: "sequential_1"\
+_________________________________________________________________\
+Layer (type)                 Output Shape              Param #   \
+=================================================================\
+flatten_1 (Flatten)          (None, 9296)              0         \
+_________________________________________________________________\
+dense_4 (Dense)              (None, 30)                278910    \
+_________________________________________________________________\
+dense_5 (Dense)              (None, 30)                930       \
+_________________________________________________________________\
+dense_6 (Dense)              (None, 30)                930       \
+_________________________________________________________________\
+dense_7 (Dense)              (None, 10)                310       \
+=================================================================\
+Total params: 281,080\
+Trainable params: 281,080\
+Non-trainable params: 0\
+_________________________________________________________________\
+Model Summery:  None\
+Model Layers:  [<keras.layers.core.Flatten object at 0x7f00e3b2db10>, <keras.layers.core.Dense object at 0x7f00e55e3710>, <keras.layers.core.Dense object at 0x7f00dc6578d0>, <keras.layers.core.Dense object at 0x7f00de66edd0>, <keras.layers.core.Dense object at 0x7f00de665050>]\
+Weights:  [[-0.0145872  -0.00287778  0.02326564 ...  0.01691176  0.01761146\
+  -0.00735745]\
+ [ 0.01281401  0.02525732  0.00601562 ...  0.01815534 -0.02083346\
+  -0.00178171]\
+ [ 0.00411178 -0.01260014  0.00268606 ...  0.01000276  0.01449681\
+  -0.00848886]\
+ ...\
+ [-0.01399291  0.00436622 -0.01307335 ...  0.01622629 -0.0112392\
+  -0.01507751]\
+ [-0.02008923  0.01038651  0.02269614 ...  0.01101054 -0.02186576\
+  -0.02009639]\
+ [ 0.02107381 -0.02411398 -0.00280373 ...  0.01713432 -0.0130013\
+  -0.00972578]]\
+Biases Shape:  (30,)\
+Epoch 1/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 4577675264.0000 - accuracy: 0.0971 - val_loss: 2.3028 - val_accuracy: 0.0977\
+Epoch 2/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3028 - accuracy: 0.0997 - val_loss: 2.3028 - val_accuracy: 0.0967\
+Epoch 3/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0985 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 4/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3028 - accuracy: 0.0997 - val_loss: 2.3029 - val_accuracy: 0.0989\
+Epoch 5/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.0987 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 6/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.1002 - val_loss: 2.3027 - val_accuracy: 0.1023\
+Epoch 7/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.1009 - val_loss: 2.3027 - val_accuracy: 0.0967\
+Epoch 8/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.1012 - val_loss: 2.3027 - val_accuracy: 0.0977\
+Epoch 9/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.0997 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 10/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0996 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 11/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3028 - accuracy: 0.0965 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 12/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0977 - val_loss: 2.3028 - val_accuracy: 0.0967\
+Epoch 13/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0989 - val_loss: 2.3028 - val_accuracy: 0.0967\
+Epoch 14/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3028 - accuracy: 0.1003 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 15/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0991 - val_loss: 2.3030 - val_accuracy: 0.0967\
+Epoch 16/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3028 - accuracy: 0.1002 - val_loss: 2.3028 - val_accuracy: 0.0967\
+Epoch 17/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.0987 - val_loss: 2.3027 - val_accuracy: 0.0967\
+Epoch 18/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.1012 - val_loss: 2.3028 - val_accuracy: 0.1002\
+Epoch 19/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3028 - accuracy: 0.0986 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 20/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.1008 - val_loss: 2.3030 - val_accuracy: 0.0967\
+Epoch 21/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.1009 - val_loss: 2.3029 - val_accuracy: 0.1002\
+Epoch 22/30\
+2428/2428 [==============================] - 16s 6ms/step - loss: 2.3027 - accuracy: 0.0993 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 23/30\
+2428/2428 [==============================] - 11s 5ms/step - loss: 2.3027 - accuracy: 0.0992 - val_loss: 2.3030 - val_accuracy: 0.0967\
+Epoch 24/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.1005 - val_loss: 2.3031 - val_accuracy: 0.0967\
+Epoch 25/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.0990 - val_loss: 2.3030 - val_accuracy: 0.0967\
+Epoch 26/30\
+2428/2428 [==============================] - 15s 6ms/step - loss: 2.3028 - accuracy: 0.1008 - val_loss: 2.3029 - val_accuracy: 0.0977\
+Epoch 27/30\
+2428/2428 [==============================] - 13s 5ms/step - loss: 2.3027 - accuracy: 0.1003 - val_loss: 2.3027 - val_accuracy: 0.0977\
+Epoch 28/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3028 - accuracy: 0.0994 - val_loss: 2.3028 - val_accuracy: 0.0989\
+Epoch 29/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3027 - accuracy: 0.0997 - val_loss: 2.3029 - val_accuracy: 0.0967\
+Epoch 30/30\
+2428/2428 [==============================] - 12s 5ms/step - loss: 2.3028 - accuracy: 0.0976 - val_loss: 2.3030 - val_accuracy: 0.0967\
+fit history:  <keras.callbacks.History object at 0x7f00dc6059d0>\
+66/66 [==============================] - 0s 3ms/step - loss: 2.3031 - accuracy: 0.0913\
+Classification Report: \
+---------------------------------------------------------------------------\
+ValueError                                Traceback (most recent call last)\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://localhost:8080/#"}}{\fldrslt \cf3 \ul \ulc3 \strokec3 <ipython-input-2-e4084b1e7971>}} in <module>()\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2      70
+\f0\b0  predition = model_seq.predict(X_val)\
+
+\f1\b      71
+\f0\b0  print("Classification Report: ")\
+---> 72 print(classification_report(y_val, predition))\
+
+\f1\b      73
+\f0\b0  print("Confussion Matrix: ")\
+
+\f1\b      74
+\f0\b0  print(confusion_matrix(y_val,predition))\
+\
+\pard\pardeftab720\sa120\partightenfactor0
+
+\f2 \cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 1 frames\
+\pard\pardeftab720\sa120\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://localhost:8080/#"}}{\fldrslt 
+\f0 \cf3 \ul \ulc3 \strokec3 /usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py}}
+\f0  in _check_targets(y_true, y_pred)\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf2      88
+\f0\b0      if len(y_type) > 1:\
+
+\f1\b      89
+\f0\b0          raise ValueError("Classification metrics can't handle a mix of \{0\} "\
+---> 90                          "and \{1\} targets".format(type_true, type_pred))\
+
+\f1\b      91
+\f0\b0  \
+
+\f1\b      92
+\f0\b0      # We can't have more than one value on y_type => The set is no more needed\
+\
+ValueError: Classification metrics can't handle a mix of multiclass and continuous-multioutput targets\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+{{\NeXTGraphic unknown.png \width9660 \height6140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+}

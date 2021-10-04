@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).\
+Model: "sequential_1"\
+_________________________________________________________________\
+Layer (type)                 Output Shape              Param #   \
+=================================================================\
+dense_3 (Dense)              (None, 1000)              9297000   \
+_________________________________________________________________\
+dense_4 (Dense)              (None, 100)               100100    \
+_________________________________________________________________\
+dense_5 (Dense)              (None, 10)                1010      \
+=================================================================\
+Total params: 9,398,110\
+Trainable params: 9,398,110\
+Non-trainable params: 0\
+_________________________________________________________________\
+Model Summery:  None\
+Model Layers:  [<keras.layers.core.Dense object at 0x7f71543b06d0>, <keras.layers.core.Dense object at 0x7f715460e710>, <keras.layers.core.Dense object at 0x7f71543f3190>]\
+Weights:  [[ 0.00170155 -0.02756111 -0.05074044 ... -0.03662381 -0.04404396\
+  -0.03921477]\
+ [-0.03897439 -0.05815974  0.01138698 ...  0.05869541 -0.05951711\
+  -0.02693381]\
+ [-0.04918821 -0.05628367  0.05103935 ... -0.05153921  0.04530213\
+  -0.05800644]\
+ ...\
+ [-0.01509302 -0.04795786  0.05686617 ...  0.01667304  0.01918451\
+   0.0273886 ]\
+ [ 0.01388368 -0.01188558 -0.01183711 ...  0.03053472 -0.02201349\
+   0.07200558]\
+ [-0.05634135 -0.04302391  0.06669554 ... -0.05302436 -0.03605016\
+  -0.04270518]]\
+Biases Shape:  (100,)\
+Epoch 1/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 1.3574 - accuracy: 0.7647 - val_loss: 0.7513 - val_accuracy: 0.8367\
+Epoch 2/10\
+1168/1168 [==============================] - 60s 52ms/step - loss: 0.3786 - accuracy: 0.9733 - val_loss: 0.2119 - val_accuracy: 0.9778\
+Epoch 3/10\
+1168/1168 [==============================] - 60s 52ms/step - loss: 0.1037 - accuracy: 0.9971 - val_loss: 0.0549 - val_accuracy: 1.0000\
+Epoch 4/10\
+1168/1168 [==============================] - 60s 52ms/step - loss: 0.0476 - accuracy: 0.9996 - val_loss: 0.0366 - val_accuracy: 1.0000\
+Epoch 5/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 0.0315 - accuracy: 1.0000 - val_loss: 0.0270 - val_accuracy: 1.0000\
+Epoch 6/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 0.0245 - accuracy: 1.0000 - val_loss: 0.0218 - val_accuracy: 1.0000\
+Epoch 7/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 0.0200 - accuracy: 1.0000 - val_loss: 0.0182 - val_accuracy: 1.0000\
+Epoch 8/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 0.0169 - accuracy: 1.0000 - val_loss: 0.0156 - val_accuracy: 1.0000\
+Epoch 9/10\
+1168/1168 [==============================] - 60s 51ms/step - loss: 0.0146 - accuracy: 1.0000 - val_loss: 0.0135 - val_accuracy: 1.0000\
+Epoch 10/10\
+1168/1168 [==============================] - 60s 52ms/step - loss: 0.0128 - accuracy: 1.0000 - val_loss: 0.0120 - val_accuracy: 1.0000\
+fit history:  <keras.callbacks.History object at 0x7f71544d5590>\
+88/88 [==============================] - 2s 20ms/step - loss: 0.0125 - accuracy: 1.0000\
+INFO:tensorflow:Assets written to: drive/MyDrive/modelSeqSGDperfect/assets\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf2 \\npre2 = model_seq.__call__(X_val[2])\\npre2_max = np.argmax(pre321, axis = 1)\\nprint(\\'Image as Test. Label: \{\} Prediction \{\}\\'.format(y_val[2], pre2_max))\\nsome_digit = X_val[2]\\nsome_digit_image = some_digit.reshape(112,83)\\nplt.imshow(some_digit_image, cmap = mat.cm.binary, interpolation="nearest")\\nplt.axis("off")\\nplt.show()\\n\\n\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 {{\NeXTGraphic unknown.png \width9660 \height6140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+}

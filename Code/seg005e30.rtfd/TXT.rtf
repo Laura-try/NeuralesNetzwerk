@@ -1,0 +1,108 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).\
+Model: "sequential_1"\
+_________________________________________________________________\
+Layer (type)                 Output Shape              Param #   \
+=================================================================\
+dense_3 (Dense)              (None, 2000)              18594000  \
+_________________________________________________________________\
+dense_4 (Dense)              (None, 100)               200100    \
+_________________________________________________________________\
+dense_5 (Dense)              (None, 10)                1010      \
+=================================================================\
+Total params: 18,795,110\
+Trainable params: 18,795,110\
+Non-trainable params: 0\
+_________________________________________________________________\
+Model Summery:  None\
+Model Layers:  [<keras.layers.core.Dense object at 0x7f684d11d350>, <keras.layers.core.Dense object at 0x7f684b903fd0>, <keras.layers.core.Dense object at 0x7f684d116cd0>]\
+Weights:  [[-0.00463138 -0.04584869  0.04572472 ...  0.03466485 -0.05314529\
+   0.00646137]\
+ [-0.03741921  0.0289096   0.00326285 ... -0.0485743  -0.0350741\
+   0.03158484]\
+ [-0.02370054 -0.03027917  0.04115009 ... -0.00949286 -0.01739283\
+   0.04056985]\
+ ...\
+ [-0.03145657  0.01521678 -0.03197402 ... -0.03352126 -0.02809597\
+   0.01368059]\
+ [ 0.03275811 -0.04015245  0.01221732 ... -0.01824645 -0.01458614\
+   0.01545657]\
+ [-0.02643756 -0.01980438 -0.02292011 ... -0.02893622 -0.02264043\
+   0.04750269]]\
+Biases Shape:  (100,)\
+Epoch 1/30\
+2335/2335 [==============================] - 147s 63ms/step - loss: 1.6412 - accuracy: 0.4549 - val_loss: 1.3604 - val_accuracy: 0.5628\
+Epoch 2/30\
+2335/2335 [==============================] - 145s 62ms/step - loss: 1.3141 - accuracy: 0.5572 - val_loss: 1.2526 - val_accuracy: 0.5529\
+Epoch 3/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 1.2133 - accuracy: 0.5773 - val_loss: 1.4518 - val_accuracy: 0.5314\
+Epoch 4/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 1.1648 - accuracy: 0.5889 - val_loss: 1.1444 - val_accuracy: 0.5753\
+Epoch 5/30\
+2335/2335 [==============================] - 149s 64ms/step - loss: 1.1235 - accuracy: 0.6003 - val_loss: 1.1327 - val_accuracy: 0.5968\
+Epoch 6/30\
+2335/2335 [==============================] - 149s 64ms/step - loss: 1.0886 - accuracy: 0.6097 - val_loss: 1.0644 - val_accuracy: 0.6001\
+Epoch 7/30\
+2335/2335 [==============================] - 149s 64ms/step - loss: 1.0806 - accuracy: 0.6120 - val_loss: 1.0569 - val_accuracy: 0.6086\
+Epoch 8/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 1.0682 - accuracy: 0.6175 - val_loss: 1.1003 - val_accuracy: 0.6039\
+Epoch 9/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 1.0424 - accuracy: 0.6238 - val_loss: 1.0862 - val_accuracy: 0.5974\
+Epoch 10/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 1.0286 - accuracy: 0.6276 - val_loss: 1.0219 - val_accuracy: 0.6358\
+Epoch 11/30\
+2335/2335 [==============================] - 145s 62ms/step - loss: 1.0148 - accuracy: 0.6305 - val_loss: 1.0471 - val_accuracy: 0.6208\
+Epoch 12/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 1.0057 - accuracy: 0.6331 - val_loss: 1.1481 - val_accuracy: 0.6021\
+Epoch 13/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 0.9958 - accuracy: 0.6367 - val_loss: 1.0006 - val_accuracy: 0.6276\
+Epoch 14/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 0.9910 - accuracy: 0.6353 - val_loss: 1.0417 - val_accuracy: 0.6235\
+Epoch 15/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 0.9795 - accuracy: 0.6393 - val_loss: 1.0535 - val_accuracy: 0.6127\
+Epoch 16/30\
+2335/2335 [==============================] - 146s 63ms/step - loss: 0.9766 - accuracy: 0.6414 - val_loss: 1.0477 - val_accuracy: 0.6274\
+Epoch 17/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 0.9760 - accuracy: 0.6397 - val_loss: 0.9883 - val_accuracy: 0.6456\
+Epoch 18/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 0.9752 - accuracy: 0.6417 - val_loss: 0.9724 - val_accuracy: 0.6415\
+Epoch 19/30\
+2335/2335 [==============================] - 146s 62ms/step - loss: 0.9683 - accuracy: 0.6413 - val_loss: 0.9515 - val_accuracy: 0.6391\
+Epoch 20/30\
+2335/2335 [==============================] - 148s 64ms/step - loss: 0.9667 - accuracy: 0.6420 - val_loss: 0.9404 - val_accuracy: 0.6440\
+Epoch 21/30\
+2335/2335 [==============================] - 151s 65ms/step - loss: 0.9603 - accuracy: 0.6450 - val_loss: 1.0918 - val_accuracy: 0.6146\
+Epoch 22/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9537 - accuracy: 0.6463 - val_loss: 0.9724 - val_accuracy: 0.6381\
+Epoch 23/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9546 - accuracy: 0.6440 - val_loss: 0.9635 - val_accuracy: 0.6324\
+Epoch 24/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9562 - accuracy: 0.6455 - val_loss: 0.9327 - val_accuracy: 0.6525\
+Epoch 25/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9518 - accuracy: 0.6460 - val_loss: 0.9551 - val_accuracy: 0.6438\
+Epoch 26/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9488 - accuracy: 0.6467 - val_loss: 1.0630 - val_accuracy: 0.6148\
+Epoch 27/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9440 - accuracy: 0.6482 - val_loss: 0.9397 - val_accuracy: 0.6460\
+Epoch 28/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9439 - accuracy: 0.6479 - val_loss: 0.9563 - val_accuracy: 0.6520\
+Epoch 29/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9431 - accuracy: 0.6469 - val_loss: 1.0251 - val_accuracy: 0.6306\
+Epoch 30/30\
+2335/2335 [==============================] - 152s 65ms/step - loss: 0.9407 - accuracy: 0.6511 - val_loss: 0.9635 - val_accuracy: 0.6319\
+fit history:  <keras.callbacks.History object at 0x7f684d1d6a10>\
+88/88 [==============================] - 3s 33ms/step - loss: 0.9549 - accuracy: 0.6392\
+-
+\f1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic unknown.png \width9660 \height6140 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+}
